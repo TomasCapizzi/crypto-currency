@@ -1,0 +1,103 @@
+.nav-container{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+    nav{
+        display: flex;
+        width: 70%;
+        justify-content: space-around;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        align-items: center;
+
+        div{          
+            a{
+                font-size: 2rem;
+                text-decoration: none;
+                color: #495057;
+            }
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            align-items: center;
+
+            li{
+                margin-right: 15px;
+                align-items: center;
+                cursor: pointer;
+                color: #495057;
+                font-weight: 400;
+                font-size: 1.25rem;
+                a{
+                    text-decoration: none;
+                    color: #495057;
+                    font-size: 1.3rem;
+                }
+            }
+            
+        }
+        ul:nth-child(2){
+            li:hover{
+                padding-bottom: 3px;
+                border-bottom: 1px solid #495057;
+            }
+        }
+        ul:nth-child(3){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .menu-search{         
+                display: flex;
+                align-items: center;
+                input{
+                    border: none;
+                }               
+            }
+        }
+
+        .drop-container{
+            display: flex;
+            position: relative;
+
+            .drop-menu-user{
+                display: none;
+                width: 150px;
+                padding: 0;
+                position: absolute;
+                text-align: center;
+                z-index: 1;
+                span{
+                    width: 100%;
+                    a:hover{
+                        width: 100%;
+                        background-color: #000;
+                        color: #fff;
+                    }
+                    p:hover{
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .drop-container:hover{
+            .drop-menu-user{
+                padding: 0;
+                top: 25px;
+                display: inline-block;
+                background-color: #fff;
+                border: 2px solid #000;
+                border-radius: 4px;
+            }
+        }
+
+
+    }
+}
+
+
