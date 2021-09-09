@@ -33,9 +33,11 @@ export default function CryptoPreview({crypto, watchList}){
         isInWatchlist(crypto);
         getPrice(crypto.id)
         setHandler(false)
+        /*
         setInterval(()=>{
             getPrice(crypto.id)
-        }, 20000)
+        }, 20000)*/
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[favs])
 
     return(

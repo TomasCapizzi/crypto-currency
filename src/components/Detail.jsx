@@ -1,6 +1,5 @@
 import React, {useEffect, useContext, useState} from 'react';
 import { useParams } from 'react-router';
-import {MdStar} from 'react-icons/md';
 import FavIcon from './FavIcon';
 import { WatchlistContext } from './WatchlistContext/WatchlistContext';
 import {AiOutlineLink} from 'react-icons/ai';
@@ -30,7 +29,8 @@ export default function Detail(){
     }
 
     useEffect(()=>{
-      getData()
+      getData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     },[id])
 
     return(
@@ -66,9 +66,9 @@ export default function Detail(){
                         {links ?
                             <div className='links'>
                                 <h3>Links <AiOutlineLink/></h3>
-                                {links.homepage && <p><a href={links.homepage[0]} target='_blank'>{links.homepage[0]}</a></p>}
-                                {links.twitter_screen_name && <a href={'https://twitter.com/' + links.twitter_screen_name} target='_blank'><FaTwitter/></a>}
-                                {links.telegram_channel_identifier && <a href={'https://t.me/' + links.telegram_channel_identifier} target='_blank' ><FaTelegramPlane/></a>}
+                                {links.homepage && <p><a href={links.homepage[0]} target='_blank' rel="noreferrer">{links.homepage[0]}</a></p>}
+                                {links.twitter_screen_name && <a href={'https://twitter.com/' + links.twitter_screen_name} rel="noreferrer" target='_blank'><FaTwitter/></a>}
+                                {links.telegram_channel_identifier && <a href={'https://t.me/' + links.telegram_channel_identifier} rel="noreferrer" target='_blank' ><FaTelegramPlane/></a>}
                             </div> : <></>
                         }
                     </div>

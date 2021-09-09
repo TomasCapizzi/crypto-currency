@@ -1,16 +1,14 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import CryptoPreview from './CryptoPrewiew';
 import { WatchlistContext } from './WatchlistContext/WatchlistContext';
-import {FcRefresh} from 'react-icons/fc'
 
 export default function Watchlist(){
     const {favs, getFavs, handler} = useContext(WatchlistContext);
 
-    const url = `https://api.coingecko.com/api/v3/coins/`
-
 
     useEffect(()=>{
-        getFavs();      
+        getFavs();
+        // eslint-disable-next-line react-hooks/exhaustive-deps      
     }, [handler])
     
 
