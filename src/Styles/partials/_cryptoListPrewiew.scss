@@ -90,3 +90,89 @@
 .priceDown{
     color: #F74B10;
 }
+
+@media only screen and (max-width:600px){
+
+    .list-preview{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        td{
+            width: 14%;
+            justify-content: center;
+            text-align: right;
+        }
+        td:nth-child(1){
+            width: 5%;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            svg{
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+            .isFav{
+                color: #ffc300;            
+            }
+            .drop-warning{
+                display: none;
+                position: absolute;
+            }
+            .drop-watchlist{position: relative;}
+    
+            .drop-watchlist:hover{
+                .drop-warning{
+                    display: flex;
+                    background-color: #495057;
+                    color: #fff;
+                    width: auto;
+                    padding: 2px 10px;
+                    border-radius: 5px;
+                    z-index: 1;
+                }
+            }
+        }
+        td:nth-child(2){
+            width: 25%;
+            margin-right: 8px;
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img{
+                    width: 25px;
+                    height: 25px;    
+                }
+                h3{
+                    margin: 0 15px;
+                    width: auto;  
+                    a{
+                        text-decoration: none;
+                        color: #495057;
+                    }              
+                }
+                p{
+                    display: none;
+                }
+            }
+            
+        }
+        td:nth-child(3){
+            width: 8%;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+        td:nth-child(4){
+            width: 8%;
+        }
+        td:nth-child(5){
+            width: 20%;
+        }
+        td:nth-child(6){
+            width: 20%;
+            display: none;
+        }
+    }
+}
